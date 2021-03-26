@@ -2,7 +2,7 @@ public class Urun {
 
     public String urunAdi;
     public int urunFiyati;
-    private int urunStogu;
+    public int urunStogu;
 
     public Urun() {
     }
@@ -36,10 +36,13 @@ public class Urun {
     public void setUrunStogu(int urunStogu) {
         this.urunStogu = urunStogu;
     }
-    public class OturmaGrubu extends Urun{
+
+    /*public class OturmaGrubu extends Urun{
+
 
     }
     public class MutfakGrubu extends Urun {
+
 
     }
     public class YatakOdasi extends Urun {
@@ -49,7 +52,7 @@ public class Urun {
     public class CocukOdasi extends Urun {
 
 
-    }
+    }*/
 
     @Override
     public String toString() {

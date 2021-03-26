@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Musteri {
 
     //her musterinin adı soyadı, iletisim bilgileri ve sepeti olacak
@@ -6,7 +8,7 @@ public class Musteri {
     public String musteriAdi;
     public String musteriSoyadi;
     private int telNo;
-    Sepet sepet;
+    public ArrayList<Urun> Sepet=new ArrayList<>();
 
     public Musteri(){
 
@@ -20,10 +22,10 @@ public class Musteri {
         this.musteriAdi=musteriAdi;
         this.telNo=telNo;
     }
-    public Musteri(String musteriAdi,String musteriSoyadi,Sepet sepet){
+    public Musteri(String musteriAdi,String musteriSoyadi,ArrayList<Urun> sepet){
         this.musteriAdi=musteriAdi;
         this.musteriSoyadi=musteriSoyadi;
-        this.sepet=sepet;
+        this.Sepet=sepet;
     }
 
     public String getMusteriAdi() {
@@ -38,12 +40,16 @@ public class Musteri {
         return telNo;
     }
 
-    public Sepet getSepet() {
-        return sepet;
+    public void setTelNo(int telNo) {
+        this.telNo = telNo;
     }
 
-    public void setSepet(Sepet sepet) {
-        this.sepet = sepet;
+    public ArrayList<Urun> getSepet() {
+        return Sepet;
+    }
+
+    public void setSepet(ArrayList<Urun> sepet) {
+        this.Sepet = sepet;
     }
 
     @Override
@@ -51,7 +57,7 @@ public class Musteri {
         return "Musteri{" +
                 "musteriAdi='" + musteriAdi + '\'' +
                 ", musteriSoyadi='" + musteriSoyadi + '\'' +
-                ", sepet=" + sepet +
+                ", sepet=" + Sepet +
                 '}';
     }
 }
